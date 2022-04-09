@@ -14,17 +14,21 @@ def fetch_articles():
         feed = feedparser.parse(feed)
 
         for item in feed.entries:
-            image = ""
             if item.links:
                 image = item.links
-            if item.links[1]:
-                if "href" in item.links[1]:
-                    image = item.links[1].href
+            if type(item.links) == list:
+                if len(item.links) > 1:
+                    if "href" in item.links[1]:
+                        image = item.links[1].href
+                if "image" in feed.feed:
+                    if "href" in feed.feed.image:
+                        image = feed.feed.image.href
             if not Article.objects.filter(title=item.title).exists():
                 tags = []
                 description = ""
                 if "description" in item:
                     description = item.description.lower()
+
                 if "tags" in item:
                     for tag in item["tags"]:
                         if "term" in tag:
@@ -38,5 +42,4 @@ def fetch_articles():
                     tags=tags,
                     image=image,
                 )
-                print(article)
                 article.save()

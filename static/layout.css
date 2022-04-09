@@ -85,7 +85,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #hpage_latest ul{margin:0; padding:0; list-style:none; display:inline;}
 #hpage_latest li{display:block; float:left; width:200px; margin:0 15px 0 0; padding:0;}
 #hpage_latest li.last{margin-right:0;}
-#hpage_latest img{margin:0; padding:4px; border:1px solid #09cae0;}
+#hpage_latest img{margin:0; padding:4px; border:1px solid #09cae0; height: 100px; width: 200px;}
 #hpage_latest .readmore{text-align:right;}
 
 /* Comments */

@@ -12,7 +12,7 @@ def home(request):
     context["podcast"] = []
     total_articles = len(articles_list)
     context["featured_article"] = articles_list[random.randint(0, total_articles)]
-    print(context["featured_article"])
+    context["list_articles"] = random.sample(list(articles_list), 15)
 
     return render(
         request,
@@ -20,5 +20,6 @@ def home(request):
         {
             "articles": context["articles"][:15],
             "featured_article": context["featured_article"],
+            "list_articles": context["list_articles"],
         },
     )
