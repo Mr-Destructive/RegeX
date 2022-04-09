@@ -53,18 +53,20 @@
           <ul>
               <h3><a href="{{ featured_article.link }}">{{ featured_article.title }}</a></h3>
           </ul>
-          <p>{{ featured_article.description }}</p>
+          <p>{{ featured_article.description | safe }}</p>
       </div>
       <div id="hpage_latest">
         <ul>
+            {% for post in list_articles %}
             <li>
-                {% if article.image %}
-                    <img src="{{ article.image }}" alt="" />
+                {% if post.image %}
+                    <img src="{{ post.image }}" alt="" />
                 {% endif %}
-                <p><a href="{{ article.link }}">{{ article.title }}</a></p>
-              <p>{{ article.description }}</p>
+                <p><a href="{{ post.link }}">{{ post.title }}</a></p>
+              <p>{{ post.description | safe }}</p>
             <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
           </li>
+          {% endfor %}
         </ul>
         <br class="clear" />
       </div>
