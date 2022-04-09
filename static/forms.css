@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+
+form, fieldset, legend{margin:0; padding:0; border:none;}
+legend{display:none;}
+input, textarea, select{font-size:12px; font-family:Georgia, "Times New Roman", Times, serif;}
+
+
+
+#topbar input{display:block; float:left; width:155px; margin:0 5px 0 0; padding:5px; color:#B6B6B6; background-color:#151515; border:1px solid #666666; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;}
+#topbar input#go{width:68px; height:26px; margin:0; padding:4px 0; text-transform:uppercase; color:#ffffff; background-color:#2C2C2C; cursor:pointer; font-weight:bold;}
