@@ -18,8 +18,24 @@ def home(request):
         request,
         "index.html",
         {
-            "articles": context["articles"][:15],
+            "articles": random.sample(list(articles_list), 15),
             "featured_article": context["featured_article"],
             "list_articles": context["list_articles"],
+        },
+    )
+
+
+def podcast(request):
+    context = {}
+
+    podcast_list = Episode.objects.values()
+    context["podcast"] = random.sample(list(podcast_list), 15)
+    total_podcast = len(podcast_list)
+
+    return render(
+        request,
+        "fetcher/podcast.html",
+        {
+            "podcasts": context["podcast"][:15],
         },
     )
