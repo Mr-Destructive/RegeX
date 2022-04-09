@@ -10,6 +10,7 @@ if hasattr(ssl, "_create_unverified_context"):
 def fetch_articles():
 
     feedlist = BlogLink.objects.values_list("rss_link", flat=True)
+    Article.objects.all().delete()
     for feed in feedlist:
         feed = feedparser.parse(feed)
 

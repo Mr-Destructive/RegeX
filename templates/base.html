@@ -1,0 +1,75 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>PresCrpto</title>
+{% load static %}
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="{% static 'images/logo.png' %}">
+<link rel="stylesheet" href="{% static 'layout.css' %}" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header">
+    <div class="fl_left">
+      <h1><a href="index.html">PresCrypto</a></h1>
+      <p>One-Stop Crypto Feed For You!</p>
+    </div>
+    <div class="fl_right"><a href="#"><img src="{% static 'images/PresCrypto.png' %}" alt="Logo"/></a></div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+          <li class="active"><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="pages/live.html">Live Prices</a></li>
+        <li><a href="{% url 'podcast' %}">Podcast</a></li>
+        <li><a href="#">About</a>
+          <ul>
+            <li><a href="pages/about.html">PresCrypt</a></li>
+            <li><a href="pages/subscription.html">Subscription</a></li>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="search">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="search" class="fuzzy-search" placeholder="Search Our Website"  onkeyup="fuzzy_search()" autocomplete="off"  />
+        </fieldset>
+      </form>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+{% block body %}
+{% endblock %}
+<div class="wrapper col7">
+  <div id="copyright">
+    <p class="fl_left">KJSCE Hack 6.0</p>
+    <p class="fl_right">Project by Team RegeX</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+<script>
+    function fuzzy_search() {
+        let input = document.querySelector('.fuzzy-search').value
+        input=input.toLowerCase();
+            let x = document.getElementsByClassName('post');;
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    console.log(x[i]);
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="list-item";                 
+            }
+        }
+    }
+ </script>
+</html>
