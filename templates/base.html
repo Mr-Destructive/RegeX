@@ -5,6 +5,7 @@
 {% load static %}
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="icon" href="{% static 'images/logo.png' %}">
 <link rel="stylesheet" href="{% static 'layout.css' %}" type="text/css" />
 </head>
@@ -22,15 +23,15 @@
 <div class="wrapper col2">
   <div id="topbar">
     <div id="topnav">
-      <ul>
-          <li class="active"><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="pages/live.html">Live Prices</a></li>
-        <li><a href="{% url 'podcast' %}">Podcast</a></li>
-        <li><a href="#">About</a>
+      <ul id="navbar">
+          <li class="item"><a href="{% url 'home' %}">Home</a></li>
+          <li class="item"><a href="{% url 'price' %}">Live Prices</a></li>
+        <li class="item"><a href="{% url 'podcast' %}">Podcast</a></li>
+        <li class="item"><a href="#">About</a>
           <ul>
-            <li><a href="pages/about.html">PresCrypt</a></li>
-            <li><a href="pages/subscription.html">Subscription</a></li>
-            <li><a href="pages/contact.html">Contact Us</a></li>
+              <li><a href="{% url 'about' %}">PresCrypto</a></li>
+              <li><a href="{% url 'subscription' %}">Subscription</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
           </ul>
         </li>
       </ul>
@@ -71,5 +72,16 @@
             }
         }
     }
+var btnContainer = document.getElementById("navbar");
+
+    var btns = btnContainer.querySelector(".item");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
  </script>
 </html>

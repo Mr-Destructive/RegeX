@@ -121,3 +121,99 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 #copyright{padding:15px 0;}
 #copyright p{margin:0; padding:0;}
+.coin-price {text-align: center;}
+.contact .row{
+    display: flex;
+    background: #d5dada;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background:var(--bg);
+    border:var(--);
+}
+
+.contact .row form .inputBox span{
+    color:rgb(0, 0, 0);
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:1rem;
+    font-size: 1rem;
+    color:rgb(0, 0, 0);
+    text-transform: none;
+    background:none;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#09cae0;
+    background: #000000;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color:#000000;
+    background: #09cae0;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background:rgb(240, 239, 239);
+    
+}
+
+.about .row .image{
+    flex:1 1.5 45rem;
+    padding: 1%
+}
+
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex:1 50rem;
+    padding:2rem;
+}
+
+.about .row .content h3{
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+}
+
+.about .row .content p{
+    font-size: 1rem;
+    color:rgb(5, 5, 5);
+    padding:1rem 0;
+    line-height: 1.4;
+}

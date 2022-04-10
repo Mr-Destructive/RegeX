@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="wrapper col3">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="index.html">Home</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="contact.html">About: Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper col4">
+  <div id="container">
+    <section class="contact" id="contact">
+
+      <h1 class="heading"><span><center>CONTACT US</center></span></h1>
+
+      <div class="row">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15083.110952316247!2d72.8995453!3d19.0735074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2fd3bcfeac0052a!2sK.%20J.%20Somaiya%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1645715199573!5m2!1sen!2sin" width="1000" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+          <form action="">
+              <h3>get in touch</h3>
+              <div class="inputBox">
+                  <span class="fas fa-user"></span>
+                  <input type="text" placeholder="Your Name">
+              </div>
+              <div class="inputBox">
+                  <span class="fas fa-envelope"></span>
+                  <input type="email" placeholder="Your Email">
+              </div>
+              <div class="inputBox">
+                  <span class="fas fa-phone"></span>
+                  <input type="number" placeholder="Your Contact Number">
+              </div>
+              <input type="submit" value="Contact Now" class="btn">
+          </form>
+      </div>
+    </div>  
+</div>
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Article, Episode, BlogLink, PodLinks
 import random
+import requests
 
 
 def home(request):
@@ -39,3 +40,34 @@ def podcast(request):
             "podcasts": context["podcast"][:15],
         },
     )
+
+
+def live_price(request):
+    data = {}
+    data["crypto_data"] = get_crypto_data()
+    print(data)
+    return render(request, "fetcher/live.html", data)
+
+
+def get_crypto_data():
+    api_url = "https://api.coinmarketcap.com/v1/ticker/?limit=10"
+
+    try:
+        print(requests.get(api_url).json())
+        data = requests.get(api_url).json()
+    except Exception as e:
+        data = dict()
+
+    return data
+
+
+def about(request):
+    return render(request, "fetcher/about.html")
+
+
+def contact(request):
+    return render(request, "fetcher/contact.html")
+
+
+def subscription(request):
+    return render(request, "fetcher/subscription.html")

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="wrapper col3">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="index.html">Home</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="about.html">About: PresCrypto</a></li>
+    </ul>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="container">
+    <section class="about" id="about">
+
+      <h1 class="heading"><center><span>ABOUT US</span></center></h1>
+
+      <div class="row">
+
+          <div class="image">
+              <img src="{% static 'images/logo1.png' %}" alt="Logo">
+          </div>
+          <div class="content">
+              <h3>PresCrypto</h3>
+              <p>Every second, the crypto world is updating itself with advancements, market competencies, and the adoption of new cryptos. To stay abreast of these ever-changing, fast-paced trends, one must be made aware every minute about the breaking news, events, investments, and trading patterns. Our mission is to meet the challenges posed by this disruptive technology as well as the dynamic global virtual currencies by providing our audience with vital, relevant, and up-to-date information.<br>
+              PresCrypto has been developed by Mr. Meet Gor, Mr. Parth Jaju, Mr. Hardik Singh, and Mr. Rohan Kumar.
+          </div>
+      </div>      
+  </div>
+</section>
+</div>
+{% endblock %}
