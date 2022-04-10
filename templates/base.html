@@ -13,10 +13,10 @@
 <div class="wrapper col1">
   <div id="header">
     <div class="fl_left">
-      <h1><a href="index.html">PresCrypto</a></h1>
+        <h1><a href="{% url 'home' %}">PresCrypto</a></h1>
       <p>One-Stop Crypto Feed For You!</p>
     </div>
-    <div class="fl_right"><a href="#"><img src="{% static 'images/PresCrypto.png' %}" alt="Logo"/></a></div>
+    <div class="fl_right"><a href="{% url 'home' %}"><img src="{% static 'images/PresCrypto.png' %}" alt="Logo"/></a></div>
     <br class="clear" />
   </div>
 </div>
